@@ -5,6 +5,11 @@ const ApplyPage = ({ jobTitle, companyName }) => {
   const [isVerified, setIsVerified] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Auto-scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     return () => {
       const scripts = document.querySelectorAll('script[src="https://dfmpe7igjx4jo.cloudfront.net/abbb9f6.js"]');
